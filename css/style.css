@@ -4,13 +4,12 @@
 	padding: 0;
 }
 body{
-	font-size: 14px !important;
+	font-size: 16px !important;
 	cursor: url('../img/mouse.gif'), auto;
 }
 section{
-	height: 95vh;
+	height: 100vh;
 }
-
 /* Fontes Personalizados */
 @font-face{
 	font-family: 'Arimo';
@@ -27,12 +26,13 @@ section{
 
 /* Cabeçalho */
 header{
-	width: 100vw;
+	width: 100%;
 	text-align: center;
 	font-family: 'Arsenica';
 	font-size: 1.5em;
 	font-weight: bold;
 	position: fixed;
+	z-index: 3;
 	animation: chegada 1s;
 }
 header p{
@@ -46,9 +46,8 @@ header a{
 
 /* Pagina 1 */
 #conteudo-texto{
-	width: 100vw;
+	width: 100%;
 	text-align: center;
-	font-weight: bold;
 	position: absolute;
 	z-index: 2;
 }
@@ -61,6 +60,13 @@ header a{
 	font-family: 'Arimo';
 	font-size: 7em;
 }
+#conteudo-texto p{
+	font-family: 'Arimo';
+	font-size: 1.5em;
+}
+#conteudo-texto h1, #conteudo-texto h2{
+	font-weight: bold;
+}
 #conteudo-imagem{
 	position: absolute;
 	z-index: 1;
@@ -71,8 +77,23 @@ header a{
 	width: 20em;
 	transform: rotateZ(-5deg);
 }
+#conteudo-desc{
+	position: absolute;
+}
 .RegulandoTam{
 	margin-top: 10%;
+}
+
+/* Página 2 */
+.lin2{
+	width: 90%;
+	float: right;
+}
+.lin2 p{
+	font-size: 1.5em;
+}
+.lin2 img{
+	transform: rotateZ(-5deg);
 }
 
 /* Animação */
@@ -99,6 +120,10 @@ header a{
 	}	
 	.RegulandoTam{
 		margin-top: 20%;
+	}	
+	.lin2{
+		width: 100%;
+		float: none;
 	}			
 }
 
@@ -106,31 +131,40 @@ header a{
 @media (min-width: 576px) and (max-width: 767.98px) {
 	body{
 		font-size: 9px !important;
-	}
+	}		
 	#conteudo-texto h1{
 		margin-top: 200px;
 	}	
 	.RegulandoTam{
 		margin-top: 20%;
-	}			
+	}	
+	.lin2{
+		width: 100%;
+		float: none;
+	}				
 }
 
 /* Dispositivos médios (tablets com 768px ou mais) */
 @media (min-width: 768px) and (max-width: 991.98px) {
 	body{
 		font-size: 14px !important;
-	}
-	.RegulandoTam{
-		margin-top: 40%;
 	}	
+	.RegulandoTam{
+		margin-top: 15%;
+	}	
+	.lin2{
+		width: 100%;
+		float: none;
+	}		
 }
 
 /* Dispositivos large (desktops com 992px ou mais) */
 @media (min-width: 992px) and (max-width: 1199.98px) { 
-	body{
-		font-size: 8px !important;
-	}
 	.RegulandoTam{
 		margin-top: 10%;
 	}	
+	.lin2{
+		width: 100%;
+		float: none;
+	}		
 }
