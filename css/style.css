@@ -1,0 +1,136 @@
+/* Estilo da Página */
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-size: 14px !important;
+	cursor: url('../img/mouse.gif'), auto;
+}
+section{
+	height: 95vh;
+}
+
+/* Fontes Personalizados */
+@font-face{
+	font-family: 'Arimo';
+	src: url('../fonts/Arimo-VariableFont_wght.woff');
+}
+@font-face{
+	font-family: 'Arsenica';
+	src: url('../fonts/ArsenicaTrial-Light.woff');
+}
+@font-face{
+	font-family: 'TT Commons Pro';
+	src: url('../fonts/tt_commons_pro_black.woff');
+}
+
+/* Cabeçalho */
+header{
+	width: 100vw;
+	text-align: center;
+	font-family: 'Arsenica';
+	font-size: 1.5em;
+	font-weight: bold;
+	position: fixed;
+	animation: chegada 1s;
+}
+header p{
+	display: inline-block;
+	margin: 0 50px;
+	cursor: pointer;
+}
+header a{
+	color: black;
+}
+
+/* Pagina 1 */
+#conteudo-texto{
+	width: 100vw;
+	text-align: center;
+	font-weight: bold;
+	position: absolute;
+	z-index: 2;
+}
+#conteudo-texto h2{
+	font-family: 'Arsenica';
+	font-size: 6em;
+}
+#conteudo-texto h1{
+	margin-top: 300px;
+	font-family: 'Arimo';
+	font-size: 7em;
+}
+#conteudo-imagem{
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	text-align: center;
+}
+#conteudo-imagem>img{
+	width: 20em;
+	transform: rotateZ(-5deg);
+}
+.RegulandoTam{
+	margin-top: 10%;
+}
+
+/* Animação */
+@keyframes chegada{
+	from{
+		opacity: 0;
+		transform: translateY(10px);
+	}
+	to{
+		opacity: 1;
+	}
+}
+@keyframes aparecimento{
+
+}
+
+/* Dispositivos extra small (telefones em modo retrato, com menos de 576px) */
+@media (max-width: 575.98px) { 
+	body{
+		font-size: 8px !important;
+	}
+	#conteudo-texto h1{
+		margin-top: 200px;
+	}	
+	.RegulandoTam{
+		margin-top: 20%;
+	}			
+}
+
+/* Dispositivos small (telefones em modo paisagem, com 576px ou mais) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+	body{
+		font-size: 9px !important;
+	}
+	#conteudo-texto h1{
+		margin-top: 200px;
+	}	
+	.RegulandoTam{
+		margin-top: 20%;
+	}			
+}
+
+/* Dispositivos médios (tablets com 768px ou mais) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+	body{
+		font-size: 14px !important;
+	}
+	.RegulandoTam{
+		margin-top: 40%;
+	}	
+}
+
+/* Dispositivos large (desktops com 992px ou mais) */
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+	body{
+		font-size: 8px !important;
+	}
+	.RegulandoTam{
+		margin-top: 10%;
+	}	
+}
