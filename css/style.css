@@ -10,11 +10,8 @@ body{
 body h1{
 	font-family: 'Arimo';
 }
-section{
-	height: 100vh;
-}
-.clear{
-	clear: both;
+a:hover{
+	color: black !important;
 }
 
 /* Fontes Personalizados */
@@ -40,7 +37,8 @@ header{
 	font-weight: bold;
 	position: fixed;
 	z-index: 3;
-	animation: chegada 1s;
+	-webkit-animation: chegada 1s;
+	        animation: chegada 1s;
 }
 header p{
 	display: inline-block;
@@ -52,6 +50,9 @@ header a{
 }
 
 /* Pagina 1 */
+#pag1{
+	height: 900px;
+}
 #conteudo-texto{
 	width: 100%;
 	text-align: center;
@@ -81,7 +82,9 @@ header a{
 }
 #conteudo-imagem>img{
 	width: 20em;
-	transform: rotateZ(-5deg);
+	-webkit-transform: rotateZ(-5deg);
+	    -ms-transform: rotate(-5deg);
+	        transform: rotateZ(-5deg);
 }
 #conteudo-desc{
 	position: absolute;
@@ -99,28 +102,48 @@ header a{
 	font-size: 1.5em;
 }
 .lin2 img{
-	transform: rotateZ(-5deg);
+	-webkit-transform: rotateZ(-5deg);
+	    -ms-transform: rotate(-5deg);
+	        transform: rotateZ(-5deg);
 }
 
 
 /* Animação */
-@keyframes chegada{
+@-webkit-keyframes chegada{
 	from{
 		opacity: 0;
-		transform: translateY(10px);
+		-webkit-transform: translateY(10px);
+		        transform: translateY(10px);
 	}
 	to{
 		opacity: 1;
 	}
 }
-@keyframes aparecimento{
+@keyframes chegada{
+	from{
+		opacity: 0;
+		-webkit-transform: translateY(10px);
+		        transform: translateY(10px);
+	}
+	to{
+		opacity: 1;
+	}
+}
 
+
+/* Hovers */
+.nav-desk p:hover{
+	transform: scale(1.1);
+	transition: all 1s;
 }
 
 /* Dispositivos extra small (telefones em modo retrato, com menos de 576px) */
 @media (max-width: 575.98px) { 
 	body{
 		font-size: 8px !important;
+	}
+	#pag1{
+		height: 600px;
 	}
 	#conteudo-texto h1{
 		margin-top: 200px;
@@ -138,6 +161,9 @@ header a{
 @media (min-width: 576px) and (max-width: 767.98px) {
 	body{
 		font-size: 9px !important;
+	}	
+	#pag1{
+		height: 600px;
 	}		
 	#conteudo-texto h1{
 		margin-top: 200px;
