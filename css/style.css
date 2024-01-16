@@ -107,6 +107,10 @@ header a{
 	        transform: rotateZ(-5deg);
 }
 
+/* Página 3*/
+.experiencia p, .experiencia ul{
+	font-size: 1.5em;
+}
 
 /* Animação */
 @-webkit-keyframes chegada{
@@ -130,9 +134,12 @@ header a{
 	}
 }
 
-
 /* Hovers */
 .nav-desk p:hover{
+	transform: scale(1.1);
+	transition: all 1s;
+}
+.iconesrede:hover{
 	transform: scale(1.1);
 	transition: all 1s;
 }
