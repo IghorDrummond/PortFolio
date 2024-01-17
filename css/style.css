@@ -13,6 +13,9 @@ body h1{
 a:hover{
 	color: black !important;
 }
+.clear{
+	clear: both;
+}
 
 /* Fontes Personalizados */
 @font-face{
@@ -122,9 +125,14 @@ header a{
 	padding: 2em;
 	height: 250px;
 }
-.cards p{
+.cards p, #selecao span{
 	font-size: 1em;
 }
+#selecao{
+	margin: 25px auto;
+}
+
+
 /* Animação */
 @-webkit-keyframes chegada{
 	from{
@@ -182,7 +190,10 @@ header a{
 	.lin2{
 		width: 100%;
 		float: none;
-	}			
+	}	
+	.cards p, #selecao span{
+		font-size: 1.5em;
+	}
 }
 
 /* Dispositivos small (telefones em modo paisagem, com 576px ou mais) */
@@ -202,7 +213,10 @@ header a{
 	.lin2{
 		width: 100%;
 		float: none;
-	}				
+	}	
+	.cards p, #selecao span{
+		font-size: 1.5em;
+	}
 }
 
 /* Dispositivos médios (tablets com 768px ou mais) */
@@ -216,7 +230,8 @@ header a{
 	.lin2{
 		width: 100%;
 		float: none;
-	}		
+	}
+
 }
 
 /* Dispositivos large (desktops com 992px ou mais) */
