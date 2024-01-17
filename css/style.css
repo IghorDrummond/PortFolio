@@ -112,6 +112,19 @@ header a{
 	font-size: 1.5em;
 }
 
+/* Página 4*/
+.cards{
+	margin-top: 10px;
+	width: 250px !important;
+	height: 450px !important;
+}
+.cards img{
+	padding: 2em;
+	height: 250px;
+}
+.cards p{
+	font-size: 1em;
+}
 /* Animação */
 @-webkit-keyframes chegada{
 	from{
@@ -141,6 +154,14 @@ header a{
 }
 .iconesrede:hover{
 	transform: scale(1.1);
+	transition: all 1s;
+}
+.cards:hover{
+	height: 500.5px;
+	background-color: black;
+	color: white;
+	font-weight: bold;
+	border: 5px dotted white !important;
 	transition: all 1s;
 }
 
