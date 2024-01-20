@@ -161,10 +161,10 @@ header a{
 	color: white;
 	font-weight: bold;
 }
-#selec-box-0{
-	-webkit-animation: inicia 0.8s;
-	        animation: inicia 0.8s;
+.select-box{
+	width: 240px !important;	
 }
+
 /* Animação */
 @-webkit-keyframes chegada{
 	from{
