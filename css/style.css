@@ -133,6 +133,22 @@ header a{
 }
 
 /* Página 5 */
+.pagina_texto{
+	font-size: 2em;
+	height: 90vh;
+}
+.pagina_texto img{
+	margin-bottom: 50px;
+}
+#formata_texto{
+	font-family: 'Arsenica';
+	font-style: italic;
+}
+#formata_texto, .pagina_texto h1{
+	font-size: 3em;
+}
+
+/* Página 6 */
 .project{
 	width: 240px;
 	height: 450px;

@@ -2,9 +2,9 @@
 //Elementos 
 var Carousel_item = [document.getElementsByClassName('carousel-js'),document.getElementsByClassName('carousel-js-pj')]
 var Selecoes = document.getElementsByClassName('project')
+var TitulosPj = document.getElementsByClassName('titulo_projetos-js')
 //Numerico
 var nAntSec = 0
-var nPosic = 0
 var nCont = 0
 //Array
 var ClassesAuto = [['carousel-js d-none active flex-wrap justify-content-around', 'carousel-js d-flex active flex-wrap justify-content-around'],
@@ -17,16 +17,17 @@ var contPag = [[], []]
 //Funções anonimas
 var rotacao = function (val, item, selecao) {
 	var bloco = document.getElementById('selec' + selecao)
-	if (val == 0) {
+	if (val == 0){
 		bloco.className = 'container-fluid d-block w-100'
 		bloco.style.transform = 'rotateY(180deg)'
+		TitulosPj[selecao].className = 'text-center font-weight-bold text-warning d-none titulo_projetos-js'
 	} else {
 		bloco.className = 'container-fluid d-none'
 		item.style.background = "url('img/bg-total.png') no-repeat center"
 		item.style.backgroundSize = 'cover'
+		TitulosPj[selecao].className = 'text-center font-weight-bold text-warning d-block titulo_projetos-js'
 	}
 }
-
 
 //=======================Escopo=====================
 //Busca os Elementos para Contador do Carousel
@@ -49,8 +50,16 @@ for (nCont = 0; nCont <= Selecoes.length - 1; nCont++) {
 }
 
 //=======================Funções====================
+/*
+===========================================================
+Função: mudarPagina(opção a ser selecionado, numero da Página)
+Motivo: Responsavel por mudar a página do carousel
+Data: 20/01/2024
+Programador(a): Ighor Drummond
+===========================================================
+*/
 function mudarPagina(opc, conteudoPagina) {
-
+	
 	//Aqui ele guarda a posição da proxima página selecionada pelo usuario
 	switch (opc) {
 		case 1:
@@ -73,7 +82,14 @@ function mudarPagina(opc, conteudoPagina) {
 	contPag[conteudoPagina][0].innerHTML = (nPosic[conteudoPagina] + 1).toString() + ' de ' + (TamItens[conteudoPagina] + 1).toString()
 	contPag[conteudoPagina][1].innerHTML = (nPosic[conteudoPagina] + 1).toString() + ' de ' + (TamItens[conteudoPagina] + 1).toString()
 }
-
+/*
+===========================================================
+Função: decrementaValor(valor a ser decrementado, Limite para verificação)
+Motivo: Verifique se o valor chegou no limite desejado
+Data: 20/01/2024
+Programador(a): Ighor Drummond
+===========================================================
+*/
 function decrementaValor(nValor, nLimite) {
 	if (nValor < 0) {
 		nValor = nLimite
@@ -84,7 +100,14 @@ function decrementaValor(nValor, nLimite) {
 
 	return nValor
 }
-
+/*
+===========================================================
+Função: transicao(numero do elemento a sofrer uma transição)
+Motivo: Responsavel por mostrar os projetos após ser selecionado
+Data: 20/01/2024
+Programador(a): Ighor Drummond
+===========================================================
+*/
 function transicao(selecao) {
 	//Objeto
 	var y = null
@@ -115,7 +138,14 @@ function transicao(selecao) {
 		x = decrementoAcremento(x, nOpc)
 	}, 1)
 }
-
+/*
+===========================================================
+Função: decrementoAcremento(valor a ser operado, opção desejada)
+Motivo: Função Responsavel por subtrair ou somar um valor determinado
+Data: 20/01/2024
+Programador(a): Ighor Drummond
+===========================================================
+*/
 function decrementoAcremento(val, nOpc) {
 
 	switch (nOpc) {
