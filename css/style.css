@@ -156,12 +156,14 @@ header a{
 	border: 2px solid black;
 	background: url('../img/bg-total.png') no-repeat center;
 	background-size: cover;
-	animation: bgfilter 5s infinite linear;
+	-webkit-animation: bgfilter 5s infinite linear;
+	        animation: bgfilter 5s infinite linear;
 	color: white;
 	font-weight: bold;
 }
 #selec-box-0{
-	animation: inicia 0.8s;
+	-webkit-animation: inicia 0.8s;
+	        animation: inicia 0.8s;
 }
 /* Animação */
 @-webkit-keyframes chegada{
@@ -184,50 +186,110 @@ header a{
 		opacity: 1;
 	}
 }
+@-webkit-keyframes bgfilter{
+	from{
+		-webkit-filter: hue-rotate(360deg);
+		        filter: hue-rotate(360deg);
+	}to{
+		-webkit-filter: hue-rotate(0deg);
+		        filter: hue-rotate(0deg)
+	}
+}
 @keyframes bgfilter{
 	from{
-		filter: hue-rotate(360deg);
+		-webkit-filter: hue-rotate(360deg);
+		        filter: hue-rotate(360deg);
 	}to{
-		filter: hue-rotate(0deg)
+		-webkit-filter: hue-rotate(0deg);
+		        filter: hue-rotate(0deg)
+	}
+}
+
+@-webkit-keyframes acessaCard{
+	0%{
+		-webkit-transform: translateX(200px);
+		        transform: translateX(200px);
+		opacity: 0;
+	}
+	50%{
+		-webkit-transform: translateX(100px);
+		        transform: translateX(100px);
+		opacity: 0;
+	}
+	100%{
+		-webkit-transform: translateX(0px);
+		        transform: translateX(0px);
+		opacity: 1;
 	}
 }
 
 @keyframes acessaCard{
 	0%{
-		transform: translateX(200px);
+		-webkit-transform: translateX(200px);
+		        transform: translateX(200px);
 		opacity: 0;
 	}
 	50%{
-		transform: translateX(100px);
+		-webkit-transform: translateX(100px);
+		        transform: translateX(100px);
 		opacity: 0;
 	}
 	100%{
-		transform: translateX(0px);
+		-webkit-transform: translateX(0px);
+		        transform: translateX(0px);
 		opacity: 1;
 	}
 }
-@keyframes saiCard{
+@-webkit-keyframes saiCard{
 	0%{
-		transform: translateX(0px);
+		-webkit-transform: translateX(0px);
+		        transform: translateX(0px);
 		opacity: 1;
 	}
 	50%{
-		transform: translateX(100px);
+		-webkit-transform: translateX(100px);
+		        transform: translateX(100px);
 		opacity: 0;
 	}
 	100%{
-		transform: translateX(200px);
+		-webkit-transform: translateX(200px);
+		        transform: translateX(200px);
+		opacity: 0;
+	}	
+}
+@keyframes saiCard{
+	0%{
+		-webkit-transform: translateX(0px);
+		        transform: translateX(0px);
+		opacity: 1;
+	}
+	50%{
+		-webkit-transform: translateX(100px);
+		        transform: translateX(100px);
+		opacity: 0;
+	}
+	100%{
+		-webkit-transform: translateX(200px);
+		        transform: translateX(200px);
 		opacity: 0;
 	}	
 }
 
 /* Hovers */
 .nav-desk p:hover{
-	transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	    -ms-transform: scale(1.1);
+	        transform: scale(1.1);
+	-webkit-transition: all 1s;
+	-o-transition: all 1s;
 	transition: all 1s;
 }
 .iconesrede:hover{
-	transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	    -ms-transform: scale(1.1);
+	        transform: scale(1.1);
+	-webkit-transition: all 1s;
+	-o-transition: all 1s;
 	transition: all 1s;
 }
 .cards:hover{
@@ -236,6 +298,8 @@ header a{
 	color: white;
 	font-weight: bold;
 	border: 5px dotted white !important;
+	-webkit-transition: all 1s;
+	-o-transition: all 1s;
 	transition: all 1s;
 }
 
