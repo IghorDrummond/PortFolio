@@ -3,6 +3,7 @@
 var Carousel_item = [document.getElementsByClassName('carousel-js'),document.getElementsByClassName('carousel-js-pj')]
 var Selecoes = document.getElementsByClassName('project')
 var TitulosPj = document.getElementsByClassName('titulo_projetos-js')
+var CaixaSelecao = document.getElementsByClassName('select-box')
 //Numerico
 var nAntSec = 0
 var nCont = 0
@@ -126,6 +127,10 @@ function transicao(selecao) {
 		nValEsp = 180
 	}
 
+	//Ativa ou Desative o Card Inferior dos Projetos
+	abreCaixa(nOpc, selecao)
+
+	//Rotaciona para abrir ou fechar os Cards Principais
 	y = setInterval(function () {
 
 		Selecoes[selecao].style.transform = 'rotateY(' + x.toString() + 'deg)'
@@ -157,4 +162,28 @@ function decrementoAcremento(val, nOpc) {
 			break
 	}
 	return val
+}
+/*
+===========================================================
+Função: abreCaixa(Opção a Ser Considerada, Card Selecionado)
+Motivo: Ajusta a Entrada e Saíada Animada do Card Inferior dos Projetos
+Data: 20/01/2024
+Programador(a): Ighor Drummond
+===========================================================
+*/
+function abreCaixa(nOpc, selecao){
+
+	switch(nOpc){
+		case 0:
+			CaixaSelecao[selecao].style.animation = 'acessaCard 1s'
+			CaixaSelecao[selecao].className = 'bg-white select-box border border-dark text-white nt-weight-bold p-2 text-center d-block'
+			break
+		case 1:	
+			CaixaSelecao[selecao].style.animation = 'saiCard 1s'
+			var tiemOut = setTimeout(function(){
+				CaixaSelecao[selecao].className = 'bg-white select-box border border-dark text-white nt-weight-bold p-2 text-center d-none'
+			}, 900)
+			break
+	}
+	
 }
