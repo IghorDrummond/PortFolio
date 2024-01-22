@@ -1,24 +1,29 @@
 //Declaração de Variaveis Globais
 //Elementos 
-var Carousel_item = [document.getElementsByClassName('carousel-js'),document.getElementsByClassName('carousel-js-pj')]
+var Carousel_item = [document.getElementsByClassName('carousel-js'), document.getElementsByClassName('carousel-js-pj')]
 var Selecoes = document.getElementsByClassName('project')
 var TitulosPj = document.getElementsByClassName('titulo_projetos-js')
 var CaixaSelecao = document.getElementsByClassName('select-box')
+var Secoes = document.getElementsByTagName('section')
+var Certificados = document.getElementsByClassName('posicao')
+var FotosCertificados = document.getElementsByClassName('borda-foto')
 //Numerico
 var nAntSec = 0
 var nCont = 0
+var nSection = 1
 //Array
 var ClassesAuto = [['carousel-js d-none active flex-wrap justify-content-around', 'carousel-js d-flex active flex-wrap justify-content-around'],
-	['carousel-js-pj d-none flex-wrap justify-content-around', 'carousel-js-pj d-flex flex-wrap justify-content-around']]
+['carousel-js-pj d-none flex-wrap justify-content-around', 'carousel-js-pj d-flex flex-wrap justify-content-around']]
 var status_ = []
 var nPosic = [0, 0]
 var nAnt = [0, 0]
-var TamItens = [0,0]
+var TamItens = [0, 0]
 var contPag = [[], []]
+var aDeg = [14, 12, 10, 8, 6, 4, 2]
 //Funções anonimas
 var rotacao = function (val, item, selecao) {
 	var bloco = document.getElementById('selec' + selecao)
-	if (val == 0){
+	if (val == 0) {
 		bloco.className = 'container-fluid d-block w-100'
 		bloco.style.transform = 'rotateY(180deg)'
 		TitulosPj[selecao].className = 'text-center font-weight-bold text-warning d-none titulo_projetos-js'
@@ -49,7 +54,6 @@ contPag[1][1].innerHTML = '1 de ' + (TamItens[1] + 1).toString()
 for (nCont = 0; nCont <= Selecoes.length - 1; nCont++) {
 	status_[nCont] = 0
 }
-
 //=======================Funções====================
 /*
 ===========================================================
@@ -60,15 +64,15 @@ Programador(a): Ighor Drummond
 ===========================================================
 */
 function mudarPagina(opc, conteudoPagina) {
-	
+
 	//Aqui ele guarda a posição da proxima página selecionada pelo usuario
 	switch (opc) {
 		case 1:
-			nPosic[conteudoPagina] --
+			nPosic[conteudoPagina]--
 			nAnt[conteudoPagina] = nPosic[conteudoPagina] + 1
 			break
 		case 2:
-			nPosic[conteudoPagina] ++
+			nPosic[conteudoPagina]++
 			nAnt[conteudoPagina] = nPosic[conteudoPagina] - 1
 			break
 	}
@@ -171,19 +175,67 @@ Data: 20/01/2024
 Programador(a): Ighor Drummond
 ===========================================================
 */
-function abreCaixa(nOpc, selecao){
+function abreCaixa(nOpc, selecao) {
 
-	switch(nOpc){
+	switch (nOpc) {
 		case 0:
 			CaixaSelecao[selecao].style.animation = 'acessaCard 1s'
 			CaixaSelecao[selecao].className = 'bg-white select-box border border-dark text-white nt-weight-bold p-2 text-center d-block'
 			break
-		case 1:	
+		case 1:
 			CaixaSelecao[selecao].style.animation = 'saiCard 1s'
-			var tiemOut = setTimeout(function(){
+			var tiemOut = setTimeout(function () {
 				CaixaSelecao[selecao].className = 'bg-white select-box border border-dark text-white nt-weight-bold p-2 text-center d-none'
 			}, 900)
 			break
 	}
+
+}
+/*
+===========================================================
+Função: certificado(Posição do Certificado)
+Motivo: Ajusta a Exibição do Proximo Certificado
+Data: 22/01/2024
+Programador(a): Ighor Drummond
+===========================================================
+*/
+function certificado(nPosic) {
+
+	if (nPosic == 0) {
+		certificadoMostra()
+	}
+	else {
+		Certificados[nPosic].className = 'itemC0' + (nPosic + 1).toString + ' posicao w-100 text-center d-none'
+	}
+}
+/*
+===========================================================
+Função: certificadoMostra()
+Motivo: Ajusta a Exibição de Todos os Certificados
+Data: 22/01/2024
+Programador(a): Ighor Drummond
+===========================================================
+*/
+function certificadoMostra() {
+	var nCont = 1
+	var p = null
 	
+	p = setInterval(function () {
+		Certificados[nCont].className ='itemC0' + (nCont + 1).toString + ' posicao w-100 mt-3 text-center'
+		FotosCertificados[nCont].animate([
+			// keyframes
+			{ transform: "rotateZ(0)", opacity: "0" },
+			{ transform: "rotateZ(" + aDeg[nCont].toString() + "deg)", opacity: "1" }
+		], {
+			// timing options
+			duration: 450,
+			iterations: 1
+		});
+
+		if(nCont == 5){
+			clearInterval(p)
+		}
+
+		nCont++
+	}, 450)
 }

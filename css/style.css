@@ -6,6 +6,7 @@
 body{
 	font-size: 16px !important;
 	cursor: url('../img/mouse.gif'), auto;
+	height: 300vh;
 }
 body h1{
 	font-family: 'Arimo';
@@ -50,6 +51,10 @@ header p{
 }
 header a{
 	color: black;
+}
+.animar{
+	animation: SectionEntrada 1s;
+	display: block;
 }
 
 /* Pagina 1 */
@@ -115,7 +120,7 @@ header a{
 	font-size: 1.5em;
 }
 
-/* Página 4*/
+/* Página 4*/ 
 .cards{
 	margin-top: 10px;
 	width: 250px !important;
@@ -163,6 +168,61 @@ header a{
 }
 .select-box{
 	width: 240px !important;	
+}
+
+/* Página 7 */
+.pag2{
+	height: 850px;
+}
+.posicao{
+	position: absolute;
+}
+.borda-foto{
+	background-color: #EDEADE;
+	padding: 1.25em;
+	border: 1px solid black;
+}
+.item01{
+	transform: rotateZ(2deg);
+}
+.item02{
+	transform: rotateZ(4deg);
+}
+.item03{
+	transform: rotateZ(6deg);
+}
+.item04{
+	transform: rotateZ(8deg);	
+}
+.item05{
+	transform: rotateZ(10deg);	
+}
+.item06{
+	transform: rotateZ(12deg);	
+}
+.item07{
+	transform: rotateZ(14deg);	
+}
+.itemC01{
+	z-index: 0;
+}
+.itemC02{
+	z-index: 1;
+}
+.itemC03{
+	z-index: 2;
+}
+.itemC04{
+	z-index: 3;
+}
+.itemC05{
+	z-index: 4;
+}
+.itemC06{
+	z-index: 5;
+}
+.itemC07{
+	z-index: 6;
 }
 
 /* Animação */
@@ -274,6 +334,14 @@ header a{
 		opacity: 0;
 	}	
 }
+@keyframes SectionEntrada{
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
 
 /* Hovers */
 .nav-desk p:hover{
@@ -300,6 +368,15 @@ header a{
 	border: 5px dotted white !important;
 	-webkit-transition: all 1s;
 	-o-transition: all 1s;
+	transition: all 1s;
+}
+.item06:hover,
+.item05:hover,
+.item04:hover,
+.item03:hover,
+.item02:hover,
+.item01:hover{
+	transform: rotateZ(0deg);
 	transition: all 1s;
 }
 
