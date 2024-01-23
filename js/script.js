@@ -7,6 +7,8 @@ var CaixaSelecao = document.getElementsByClassName('select-box')
 var Secoes = document.getElementsByTagName('section')
 var Certificados = document.getElementsByClassName('posicao')
 var FotosCertificados = document.getElementsByClassName('borda-foto')
+var Nome = document.getElementsByName('nome')
+var Mensagem = document.getElementsByName('caixa-mensagem')
 //Numerico
 var nAntSec = 0
 var nCont = 0
@@ -20,6 +22,8 @@ var nAnt = [0, 0]
 var TamItens = [0, 0]
 var contPag = [[], []]
 var aDeg = [2, 4, 6, 8, 10, 12, 14]
+//Boolean
+var lEnviar = false
 //Funções anonimas
 var rotacao = function (val, item, selecao) {
 	var bloco = document.getElementById('selec' + selecao)
@@ -156,7 +160,6 @@ Programador(a): Ighor Drummond
 ===========================================================
 */
 function decrementoAcremento(val, nOpc) {
-
 	switch (nOpc) {
 		case 0:
 			val++
@@ -176,7 +179,6 @@ Programador(a): Ighor Drummond
 ===========================================================
 */
 function abreCaixa(nOpc, selecao) {
-
 	switch (nOpc) {
 		case 0:
 			CaixaSelecao[selecao].style.animation = 'acessaCard 1s'
@@ -189,7 +191,6 @@ function abreCaixa(nOpc, selecao) {
 			}, 900)
 			break
 	}
-
 }
 /*
 ===========================================================
@@ -237,4 +238,73 @@ function certificadoMostra() {
 
 		nCont++
 	}, 450)
+}
+/*
+===========================================================
+Função: certificadoMostra()
+Motivo: Envia a Mensagem Via WhatsApp após validações
+Data: 23/01/2024
+Programador(a): Ighor Drummond
+===========================================================
+*/
+function enviarMensagem(){
+	var Mensagem = document.getElementsByName('caixa-mensagem')
+
+	if((Nome[0].value).trim() != ''  ){
+		lEnviar = true 
+	}else{
+		lEnviar = false
+
+	}
+
+	if((Mensagem[0].value).trim() != ''){
+		cMensagem = TrataMensagem(Mensagem[0].value)
+	}else{
+		cMensagem = 'Olá,%20Sou%20'+ Nome[0].value +'%20Eu%20visualizei%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20sua%20disponibilidade?%20'
+	}
+
+	if(lEnviar){
+		window.open('https://wa.me/5515991570578?text='+cMensagem, 'De: ' + Nome + '. Para: Ighor Drummond',)
+	}
+}
+/*
+===========================================================
+Função: TrataMensagem(Mensagem a Ser Tratada)
+Motivo: Ajusta a Mensagem para formato do WhatsApp
+Data: 23/01/2024
+Programador(a): Ighor Drummond
+===========================================================
+*/
+function TrataMensagem(Mensagem){
+	var cRet = ''
+	var nCont = 0
+
+	cRet = '*'+ Nome[0].value +':*%20'
+
+	for(nCont = 0; nCont <= Mensagem.length; nCont++){
+		if(Mensagem.charAt(nCont)!= ' '){
+			cRet += Mensagem.charAt(nCont)
+		}else{
+			cRet += '%20'
+		}
+	}
+
+	return cRet += '%20'
+}
+/*
+===========================================================
+Função: ejetaNomeInput()
+Motivo: Coloca o Nome na Mensagem do PlaceHolder 
+Data: 23/01/2024
+Programador(a): Ighor Drummond
+===========================================================
+*/
+function ejetaNomeInput(){
+	var cChar = ''
+
+	if(Nome[0].value != ''){
+		Mensagem[0].placeholder = 'Olá, Sou '+ Nome[0].value +' Eu visualizei seu portfólio e gostaria de conversar sobre sua disponibilidade?'
+	}else{
+		Mensagem[0].placeholder = "Olá, Sou 'Seu Nome' Eu visualizei seu portfólio e gostaria de conversar sobre sua disponibilidade?"
+	}
 }
