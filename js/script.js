@@ -306,9 +306,9 @@ function ejetaNomeInput(){
 	var cChar = ''
 
 	if(Nome[0].value != ''){
-		Mensagem[0].placeholder = 'Olá, Sou '+ Nome[0].value +' Eu visualizei seu portfólio e gostaria de conversar sobre sua disponibilidade?'
+		Mensagem[0].placeholder = 'Olá, Sou '+ Nome[0].value +'. Eu visualizei seu portfólio e gostaria de conversar sobre sua disponibilidade?'
 	}else{
-		Mensagem[0].placeholder = "Olá, Sou 'Seu Nome' Eu visualizei seu portfólio e gostaria de conversar sobre sua disponibilidade?"
+		Mensagem[0].placeholder = "Olá, Sou 'Seu Nome'. Eu visualizei seu portfólio e gostaria de conversar sobre sua disponibilidade?"
 	}
 }
 /*
