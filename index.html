@@ -661,43 +661,42 @@
 
 			<section><!-- Inicio do Sétimo Conteúdo -->
 				<h1 class="mx-5 py-5">Entre em Contato</h1>	
-
-				<div class="w-100 border p-3 d-flex">
-					<div class="gmail m-auto w-50 ">
+					<div class="border w-50 m-auto p-3">
 						<form action="https://formsubmit.co/ighordrummond2001@gmail.com" method="POST">
-							<!-- Desativa o Captcha do Email -->
-							<input type="hidden" name="_captcha" value="false">
-							<input type="hidden" name="_next" value="agradecimento.html">
 							<fieldset>
 								<legend>De:</legend>
 								<div>
-									<label for="email">Digite Seu Email:</label>
-									<input type="email" name="email" required placeholder="SeuEmail@gmail.com">
+									<label for="email">Seu Email:</label>
+									<input class="form-control" type="email" name="email" required placeholder="youremail@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
 								</div>
 								<div>
-									<label for="_cc">CC:</label>
-									<input type="hidden" name="_cc" placeholder="SeuEmail@gmail.com,
-									Fulano@email.com">
-								</div>
-							</fieldset>
-							<fieldset>
-								<legend>Assunto:</legend>
-								<div>
-									<label>Digite o Seu Assunto: </label>
-									<textarea id="caixa-texto">
-										
-									</textarea>
-								</div>
 							</fieldset>
 
-							<input type="submit" name="" value="aperte">
+							<fieldset>
+								<legend>CC:</legend>
+								<input class="form-control" type="email" name="_cc" placeholder="email01@gmail.com, email02@gmail.com,...">
+							</fieldset>
+								
+							<fieldset>
+								<legend>Assunto:</legend>
+								<input class="form-control" type="text" name="_subject" placeholder="Digite Algo..." required>
+								<label>Anexe um Arquivo em Formato PNG ou JPG caso Desejar</label>
+								<input class="btn btn-dark mt-2 d-block m-auto w-100" type="file" name="attachment" accept="image/png, image/jpeg"> 
+							</fieldset>
+					    	<button class="btn btn-dark d-block espacamento" type="submit">Enviar</button>
+
+					    	<!-- Configuração do Formulario -->
+					    	<input type="hidden" name="_captcha" value="false">
+					    	<input type="hidden" name="_template" value="table">
+					    	<input type="hidden" name="_autoresponse" value="Agradeço pelo seu email. Estou grato pelo seu Envio. Estarei Analisando e Lendo o Mais Rápido Possível!">
+					    	<input type="text" name="_honey" style="display:none">
+					    	<input type="hidden" name="_next" value="alert('foi')">
 						</form>
 					</div>
-				</div>
 			</section><!-- Fim do Sétimo Conteúdo -->
 		</main><!-- Fim do Corpo das Sections -->
 
-		<footer class="text-center"><!-- Inicio do Rodapé -->
+		<footer class="text-center mt-5"><!-- Inicio do Rodapé -->
 			<div class="container-fluid">
 				<a href="https://www.linkedin.com/in/ighordrummond/" title="Linkedin de Ighor Drummond">
 					<i class="iconesrede mx-3 fa-brands fa-linkedin fa-2xl" style="color: #000000;"></i>
