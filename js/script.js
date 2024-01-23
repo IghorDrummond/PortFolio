@@ -19,7 +19,7 @@ var nPosic = [0, 0]
 var nAnt = [0, 0]
 var TamItens = [0, 0]
 var contPag = [[], []]
-var aDeg = [14, 12, 10, 8, 6, 4, 2]
+var aDeg = [2, 4, 6, 8, 10, 12, 14]
 //Funções anonimas
 var rotacao = function (val, item, selecao) {
 	var bloco = document.getElementById('selec' + selecao)
@@ -218,9 +218,8 @@ Programador(a): Ighor Drummond
 */
 function certificadoMostra() {
 	var nCont = 1
-	var p = null
 	
-	p = setInterval(function () {
+	var p = setInterval(function () {
 		Certificados[nCont].className ='itemC0' + (nCont + 1).toString + ' posicao w-100 mt-3 text-center'
 		FotosCertificados[nCont].animate([
 			// keyframes

@@ -40,7 +40,7 @@ header{
 	font-size: 1.5em;
 	font-weight: bold;
 	position: fixed;
-	z-index: 3;
+	z-index: 7;
 	-webkit-animation: chegada 1s;
 	        animation: chegada 1s;
 }
@@ -53,7 +53,8 @@ header a{
 	color: black;
 }
 .animar{
-	animation: SectionEntrada 1s;
+	-webkit-animation: SectionEntrada 1s;
+	        animation: SectionEntrada 1s;
 	display: block;
 }
 
@@ -183,25 +184,39 @@ header a{
 	border: 1px solid black;
 }
 .item01{
-	transform: rotateZ(2deg);
+	-webkit-transform: rotateZ(2deg);
+	    -ms-transform: rotate(2deg);
+	        transform: rotateZ(2deg);
 }
 .item02{
-	transform: rotateZ(4deg);
+	-webkit-transform: rotateZ(4deg);
+	    -ms-transform: rotate(4deg);
+	        transform: rotateZ(4deg);
 }
 .item03{
-	transform: rotateZ(6deg);
+	-webkit-transform: rotateZ(6deg);
+	    -ms-transform: rotate(6deg);
+	        transform: rotateZ(6deg);
 }
 .item04{
-	transform: rotateZ(8deg);	
+	-webkit-transform: rotateZ(8deg);
+	    -ms-transform: rotate(8deg);
+	        transform: rotateZ(8deg);	
 }
 .item05{
-	transform: rotateZ(10deg);	
+	-webkit-transform: rotateZ(10deg);
+	    -ms-transform: rotate(10deg);
+	        transform: rotateZ(10deg);	
 }
 .item06{
-	transform: rotateZ(12deg);	
+	-webkit-transform: rotateZ(12deg);
+	    -ms-transform: rotate(12deg);
+	        transform: rotateZ(12deg);	
 }
 .item07{
-	transform: rotateZ(14deg);	
+	-webkit-transform: rotateZ(14deg);
+	    -ms-transform: rotate(14deg);
+	        transform: rotateZ(14deg);	
 }
 .itemC01{
 	z-index: 0;
@@ -223,6 +238,13 @@ header a{
 }
 .itemC07{
 	z-index: 6;
+}
+
+/* Sétimo Conteúdo */
+.gmail-aberto{
+	background: url('../img/carta-fechada.PNG') no-repeat center;
+	background-size: ;
+	height: 50vh;
 }
 
 /* Animação */
@@ -334,6 +356,14 @@ header a{
 		opacity: 0;
 	}	
 }
+@-webkit-keyframes SectionEntrada{
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
 @keyframes SectionEntrada{
 	from{
 		opacity: 0;
@@ -376,7 +406,11 @@ header a{
 .item03:hover,
 .item02:hover,
 .item01:hover{
-	transform: rotateZ(0deg);
+	-webkit-transform: rotateZ(0deg);
+	    -ms-transform: rotate(0deg);
+	        transform: rotateZ(0deg);
+	-webkit-transition: all 1s;
+	-o-transition: all 1s;
 	transition: all 1s;
 }
 
@@ -438,7 +472,6 @@ header a{
 		width: 100%;
 		float: none;
 	}
-
 }
 
 /* Dispositivos large (desktops com 992px ou mais) */
