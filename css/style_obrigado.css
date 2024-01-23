@@ -1,0 +1,57 @@
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			@font-face{
+				font-family: 'Arsenica';
+				src: url('fonts/ArsenicaTrial-Light.woff');
+			}				
+			body{
+				background-color: #0d0e0f;
+				color: white;
+				font-weight: bold;
+				font-family: 'Arsenica';
+			}		
+			main{
+				width: 90%;
+				height: 100vh;
+				margin: auto;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				text-align: center;
+			}
+			h1{
+				margin-bottom: 15px;
+			}
+			button{
+				width: 300px;
+				background-color: skyblue;
+				height: 50px;
+				margin-top: 15px;
+				display: inline;
+				cursor: pointer;
+				color: white;
+				font-weight: bold;
+				border: none;
+				border-radius: 20px;
+			}
+			#mensagem{
+				width: 50%;
+				font-size: 1.5em;
+			}
+
+			/* Dispositivos extra small (telefones em modo retrato, com menos de 576px) */
+			@media (max-width: 575.98px) { 
+				#mensagem{
+					width: 100%;
+					font-size: 1em;
+				}
+			}
+			/* Dispositivos small (telefones em modo paisagem, com 576px ou mais) */
+			@media (min-width: 576px) and (max-width: 767.98px) {
+				#mensagem{
+					width: 100%;
+					font-size: 1em;
+				}
+			}

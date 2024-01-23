@@ -680,6 +680,11 @@
 							<fieldset>
 								<legend>Assunto:</legend>
 								<input class="form-control" type="text" name="_subject" placeholder="Digite Algo..." required>
+							</fieldset>
+							<fieldset>
+								<legend>Mensagem:</legend>
+								<textarea class="form-control" type="text" name="message" placeholder="Digite Algo..." required>
+								</textarea>
 								<label>Anexe um Arquivo em Formato PNG ou JPG caso Desejar</label>
 								<input class="btn btn-dark mt-2 d-block m-auto w-100" type="file" name="attachment" accept="image/png, image/jpeg"> 
 							</fieldset>
@@ -690,7 +695,8 @@
 					    	<input type="hidden" name="_template" value="table">
 					    	<input type="hidden" name="_autoresponse" value="Agradeço pelo seu email. Estou grato pelo seu Envio. Estarei Analisando e Lendo o Mais Rápido Possível!">
 					    	<input type="text" name="_honey" style="display:none">
-					    	<input type="hidden" name="_next" value="alert('foi')">
+					    	<input type="hidden" name="_next" value="">
+					    	<button onclick="window.location.href = 'obrigado.html'"></button>
 						</form>
 					</div>
 			</section><!-- Fim do Sétimo Conteúdo -->
