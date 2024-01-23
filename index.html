@@ -661,35 +661,34 @@
 
 			<section><!-- Inicio do Sétimo Conteúdo -->
 				<h1 class="mx-5 py-5">Entre em Contato</h1>	
-					<div class="border w-50 m-auto p-3">
+					<div class="border caixa-form m-auto p-3">
 						<form action="https://formsubmit.co/ighordrummond2001@gmail.com" method="POST">
 							<fieldset>
-								<legend>De:</legend>
+								<legend for='email'>De:</legend>
 								<div>
-									<label for="email">Seu Email:</label>
 									<input class="form-control" type="email" name="email" required placeholder="youremail@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
 								</div>
 								<div>
 							</fieldset>
 							
 							<fieldset>
-								<legend>Assunto:</legend>
+								<legend for='_subject'>Assunto:</legend>
 								<input class="form-control" type="text" name="_subject" placeholder="Digite Algo..." required>
 							</fieldset>
 
 							<fieldset>
-								<legend>Mensagem:</legend>
+								<legend for='message'>Mensagem:</legend>
 								<textarea class="form-control" type="text" name="message" placeholder="Digite Algo..." required>
 								</textarea>
 								<label>Anexe um Arquivo em Formato PNG ou JPG caso Desejar</label>
 								<input class="btn btn-dark mt-2 d-block m-auto w-100" type="file" name="attachment" accept="image/png, image/jpeg"> 
 							</fieldset>
+
 					    	<button class="btn btn-dark d-block espacamento" type="submit">Enviar</button>
 
 					    	<!-- Configuração do Formulario -->
 					    	<input type="hidden" name="_captcha" value="false">
 					    	<input type="hidden" name="_template" value="table">
-					    	<input type="hidden" name="_autoresponse" value="Agradeço pelo seu email. Estou grato pelo seu Envio. Estarei Analisando e Lendo o Mais Rápido Possível!">
 					    	<input type="text" name="_honey" style="display:none">
 					    	<input type="hidden" name="_next" value="https://ighordrummond.github.io/PortFolio/index_obrigado.html">
 						</form>

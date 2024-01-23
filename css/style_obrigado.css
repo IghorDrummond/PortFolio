@@ -4,7 +4,7 @@
 			}
 			@font-face{
 				font-family: 'Arsenica';
-				src: url('fonts/ArsenicaTrial-Light.woff');
+				src: url('../fonts/ArsenicaTrial-Light.woff');
 			}				
 			body{
 				background-color: #0d0e0f;
