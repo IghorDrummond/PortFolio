@@ -265,16 +265,15 @@ header a{
 .caixa-form{
 	width: 50%;
 }
-.form-control-txts {
-    display: block;
-    width: 100%;
-    height: calc(2.25rem + 2px);
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #495057;
-    border: 1px solid #ced4da;
-    border-radius: .25rem;
+.botao{
+	width: 20%;
+	height: 5vh;
+	background: transparent;
+	border-radius: 60px;
+	cursor: pointer;
+}
+.actived{
+	background: #343a40 !important;
 }
 
 

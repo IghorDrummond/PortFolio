@@ -9,6 +9,8 @@ var Certificados = document.getElementsByClassName('posicao')
 var FotosCertificados = document.getElementsByClassName('borda-foto')
 var Nome = document.getElementsByName('nome')
 var Mensagem = document.getElementsByName('caixa-mensagem')
+var Formularios = document.getElementsByTagName('form')
+var selecionaBtn = document.getElementsByClassName('botao')
 //Numerico
 var nAntSec = 0
 var nCont = 0
@@ -260,11 +262,12 @@ function enviarMensagem(){
 	if((Mensagem[0].value).trim() != ''){
 		cMensagem = TrataMensagem(Mensagem[0].value)
 	}else{
-		cMensagem = 'Olá,%20Sou%20'+ Nome[0].value +'%20Eu%20visualizei%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20sua%20disponibilidade?%20'
+		cMensagem = Mensagem[0].placeholder
 	}
 
 	if(lEnviar){
-		window.open('https://wa.me/5515991570578?text='+cMensagem, 'De: ' + Nome + '. Para: Ighor Drummond',)
+		window.open('https://wa.me/5515988097787?text='+cMensagem)
+		window.location.href = 'index_obrigado.html'
 	}
 }
 /*
@@ -307,4 +310,68 @@ function ejetaNomeInput(){
 	}else{
 		Mensagem[0].placeholder = "Olá, Sou 'Seu Nome' Eu visualizei seu portfólio e gostaria de conversar sobre sua disponibilidade?"
 	}
+}
+/*
+===========================================================
+Função: selecionaContato(Posição do Contato)
+Motivo: Seleciona o Contato desejado pelo Usuario 
+Data: 23/01/2024
+Programador(a): Ighor Drummond
+===========================================================
+*/
+function selecionaContato(Posic){
+
+	switch(Posic){
+		case 1:
+			Formularios[0].className = 'd-none'
+			Formularios[1].className = 'd-block'
+			selecionaBtn[0].className = 'botao d-inline-block actived'
+			selecionaBtn[1].className = 'botao d-inline-block'
+			break
+		case 2:
+			Formularios[1].className = 'd-none'
+			Formularios[0].className = 'd-block'
+			selecionaBtn[1].className = 'botao d-inline-block actived'
+			selecionaBtn[0].className = 'botao d-inline-block'	
+			break	
+	}
+}
+/*
+===========================================================
+Função: selecionaConteudo(Conteúdo Selecionado)
+Motivo: Usa o Scroll Para Posicionar na Página Escolhida
+Data: 23/01/2024
+Programador(a): Ighor Drummond
+===========================================================
+*/
+function selecionaConteudo(Posic){
+
+	switch(Posic){
+		case 1:
+			Posic = 0
+			break
+		case 2:
+			Posic = 1
+			break
+		case 3:
+			Posic = 2
+			break
+		case 4: 
+			Posic = 3
+			break
+		case 5: 
+			Posic = 5
+			break
+		case 6:
+			Posic = 6
+			break
+		case 7:
+			Posic = 7
+			break			
+	}
+
+	window.scrollTo({
+        top: Secoes[(Posic)].offsetTop,
+        behavior: 'smooth' // Comportamento suave de rolagem
+      });	
 }

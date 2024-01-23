@@ -57,13 +57,13 @@
 				</div>
 
 				<div class="nav-desk w-100 d-xl-block d-none">
-					<p>Home</p>
-					<p>Sobre Mim</p>
-					<p>Experiência de Trabalho</p>
-					<p>Skills & Expertise</p>
-					<p>Meus Projetos</p>
-					<p>Certificados e Licensas</p>
-					<p>Contato</p>
+					<p onclick='selecionaConteudo(1)'>Home</p>
+					<p onclick='selecionaConteudo(2)'>Sobre Mim</p>
+					<p onclick='selecionaConteudo(3)'>Experiência de Trabalho</p>
+					<p onclick='selecionaConteudo(4)'>Skills & Expertise</p>
+					<p onclick='selecionaConteudo(5)'>Meus Projetos</p>
+					<p onclick='selecionaConteudo(6)'>Certificados e Licensas</p>
+					<p onclick='selecionaConteudo(7)'>Contato</p>
 				</div>
 			</nav><!-- Fim da Barra de Navegação -->
 
@@ -658,16 +658,16 @@
 				</div>									
 			</section><!-- Fim do Sexto Conteúdo -->
 
-
 			<section><!-- Inicio do Sétimo Conteúdo -->
 				<h1 class="mx-5 py-5">Entre em Contato</h1>	
 					<div class="border caixa-form m-auto p-3">
 						<div class="text-center">
-							<button class="botao d-inline-block"><i class="fa-brands fa-whatsapp fa-xl"></i></button>
-							<button class=" botao d-inline-block "><i class="fa-solid fa-envelope fa-xl"></i></button>
+							<strong>Via:</strong>
+							<button onclick="selecionaContato(1)" class="botao d-inline-block"><i class="fa-brands fa-whatsapp fa-2xl" style="color: #25D366;"></i></button>
+							<button onclick="selecionaContato(2)" class=" botao d-inline-block actived"><i class="fa-solid fa-envelope fa-2xl" style="color: red;"></i></button>
 						</div>
 
-						<form action="https://formsubmit.co/ighordrummond2001@gmail.com" method="POST" class="d-none">
+						<form action="https://formsubmit.co/ighordrummond2001@gmail.com" method="POST" class="d-block">
 							<fieldset>
 								<legend for='email'>De:</legend>
 								<div>
@@ -697,7 +697,7 @@
 					    	<input type="hidden" name="_next" value="https://ighordrummond.github.io/PortFolio/index_obrigado.html">
 						</form>
 
-						<form action="" method="POST">
+						<form action="" method="POST" class="d-none">
 							<fieldset>
 								<legend for='nome'>Seu Nome:</legend>
 								<input onkeyup="ejetaNomeInput()" class="form-control" type="text" name="nome" required>
@@ -708,7 +708,7 @@
 								<textarea class="form-control p-0" name="caixa-mensagem" placeholder="Olá, Sou 'Seu Nome' Eu visualizei seu portfólio e gostaria de conversar sobre sua disponibilidade?"></textarea>
 							</fieldset>
 
-							<input class="btn btn-dark d-block espacamento" name="Enviar" onclick="enviarMensagem()" value="Enviar">
+							<button onclick="enviarMensagem()" class="btn btn-dark d-block espacamento" type="submit">Enviar</button>
 						</form>
 
 					</div>
