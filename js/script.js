@@ -267,7 +267,7 @@ function enviarMensagem(){
 
 	if(lEnviar){
 		window.open('https://wa.me/5515988097787?text='+cMensagem)
-		window.location.href = 'index_obrigado.html'
+		window.location.href = 'https://ighordrummond.github.io/PortFolio/index_obrigado.html'
 	}
 }
 /*
