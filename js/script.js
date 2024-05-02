@@ -21,7 +21,7 @@ var status_ = []
 var nPosic = [0, 0]
 var nAnt = [0, 0]
 var TamItens = [0, 0]
-var contPag = [[], []]
+var contPag = [[]]
 var aDeg = [2, 4, 6, 8, 10, 12, 14]
 //Boolean
 var lEnviar = false
@@ -43,7 +43,7 @@ var rotacao = function (val, item, selecao) {
 //=======================Escopo=====================
 //Busca os Elementos para Contador do Carousel
 contPag[0] = document.getElementsByClassName('contador-pag')
-contPag[1] = document.getElementsByClassName('contador-pag-pj')
+//contPag[1] = document.getElementsByClassName('contador-pag-pj')Desativada pois foi trocada pelo carousel do bootstrap.
 //Recebe a quantidade dos Itens existentes no carousel
 TamItens[0] = Carousel_item[0].length - 1
 TamItens[1] = Carousel_item[1].length - 1
@@ -51,7 +51,8 @@ TamItens[1] = Carousel_item[1].length - 1
 //Seta o tamanho Inicial para os dois carousel da Página
 contPag[0][0].innerHTML = '1 de ' + (TamItens[0] + 1).toString()
 contPag[0][1].innerHTML = '1 de ' + (TamItens[0] + 1).toString()
-
+/*
+*********Desativada pois foi trocada pelo carousel do bootstrap.************
 contPag[1][0].innerHTML = '1 de ' + (TamItens[1] + 1).toString()
 contPag[1][1].innerHTML = '1 de ' + (TamItens[1] + 1).toString()
 
@@ -59,6 +60,7 @@ contPag[1][1].innerHTML = '1 de ' + (TamItens[1] + 1).toString()
 for (nCont = 0; nCont <= Selecoes.length - 1; nCont++) {
 	status_[nCont] = 0
 }
+*/
 //=======================Funções====================
 /*
 ===========================================================

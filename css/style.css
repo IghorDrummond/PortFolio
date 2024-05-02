@@ -480,6 +480,12 @@ header a{
 	.carousel-item a{
 		width: 50%;
 	}	
+	.carousel-item{
+		font-size: 1.5em;
+	}	
+	.carousel-item p{
+		width: 90% !important;
+	}	
 }
 
 /* Dispositivos small (telefones em modo paisagem, com 576px ou mais) */
