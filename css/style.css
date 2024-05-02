@@ -170,6 +170,9 @@ header a{
 .select-box{
 	width: 240px !important;	
 }
+.carousel-item a{
+	width: 25%;
+}
 
 /* Página 7 */
 .pag2{
@@ -474,6 +477,9 @@ header a{
 	.caixa-form{
 		width: 90%;
 	}
+	.carousel-item a{
+		width: 50%;
+	}	
 }
 
 /* Dispositivos small (telefones em modo paisagem, com 576px ou mais) */
