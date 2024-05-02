@@ -1,7 +1,6 @@
 //Declaração de Variaveis Globais
 //Elementos 
 var Carousel_item = [document.getElementsByClassName('carousel-js'), document.getElementsByClassName('carousel-js-pj')]
-var Selecoes = document.getElementsByClassName('project')
 var TitulosPj = document.getElementsByClassName('titulo_projetos-js')
 var CaixaSelecao = document.getElementsByClassName('select-box')
 var Secoes = document.getElementsByTagName('section')
@@ -118,7 +117,7 @@ Motivo: Responsavel por mostrar os projetos após ser selecionado
 Data: 20/01/2024
 Programador(a): Ighor Drummond
 ===========================================================
-*/
+
 function transicao(selecao) {
 	//Objeto
 	var y = null
@@ -153,6 +152,9 @@ function transicao(selecao) {
 		x = decrementoAcremento(x, nOpc)
 	}, 1)
 }
+Função Desativada: 02/05/2024 - Ighor Drummond
+Motivo: Foi trocado pelo Carousel do Bootstrap para melhor visibilidade
+*/
 /*
 ===========================================================
 Função: decrementoAcremento(valor a ser operado, opção desejada)
@@ -160,7 +162,7 @@ Motivo: Função Responsavel por subtrair ou somar um valor determinado
 Data: 20/01/2024
 Programador(a): Ighor Drummond
 ===========================================================
-*/
+
 function decrementoAcremento(val, nOpc) {
 	switch (nOpc) {
 		case 0:
@@ -172,6 +174,9 @@ function decrementoAcremento(val, nOpc) {
 	}
 	return val
 }
+Função Desativada: 02/05/2024 - Ighor Drummond
+Motivo: Foi trocado pelo Carousel do Bootstrap para melhor visibilidade
+*/
 /*
 ===========================================================
 Função: abreCaixa(Opção a Ser Considerada, Card Selecionado)
@@ -179,7 +184,7 @@ Motivo: Ajusta a Entrada e Saíada Animada do Card Inferior dos Projetos
 Data: 20/01/2024
 Programador(a): Ighor Drummond
 ===========================================================
-*/
+
 function abreCaixa(nOpc, selecao) {
 	switch (nOpc) {
 		case 0:
@@ -194,6 +199,9 @@ function abreCaixa(nOpc, selecao) {
 			break
 	}
 }
+Função Desativada: 02/05/2024 - Ighor Drummond
+Motivo: Foi trocado pelo Carousel do Bootstrap para melhor visibilidade
+*/
 /*
 ===========================================================
 Função: certificado(Posição do Certificado)
