@@ -12,7 +12,7 @@ Ao longo da minha carreira, busquei aprimorar minhas habilidades e conhecimentos
 Contato:
 Estou sempre aberto a novas conexões e oportunidades colaborativas. Se você se sentir inspirado por algum projeto ou quiser discutir possíveis colaborações, sinta-se à vontade para entrar em contato por meio do meu Portfólio onde tem uma sessão Exclusiva para isso, tendo as Opções de conversar via WhatsApp ou E-mail. 
 
-Agradeço a todos que fazem parte desta jornada e convido vocês a explorarem meu novo portfólio: <a href="https://lnkd.in/dj63u4Su"> Acessar Site </a> Espero que apreciem tanto quanto eu apreciei construí-lo!
+Agradeço a todos que fazem parte desta jornada e convido vocês a explorarem meu novo portfólio: <a href="https://ighordrummond.netlify.app"> Acessar Site </a> Espero que apreciem tanto quanto eu apreciei construí-lo!
 Vamos juntos criar impacto e alcançar novos patamares! 🚀
 
 <h4>Desenvolvido nas Linguagens:</h4>
